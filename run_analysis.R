@@ -1,4 +1,6 @@
-#cleaning data course assignment
+# Getting and Cleaning data course assignment
+# code to read in  data and produce two tidy datasets
+
 install.packages("dplyr")
 library(dplyr)
 
@@ -6,7 +8,8 @@ library(dplyr)
 # the data files subject_test.txt,x_test.txt,y_test.txt
 # the data files subject_train.txt,x_train.txt,y_train.txt
 
-setwd("C:/Users/james/Desktop/Coursera/Getting and cleaning data Assignment 1")
+
+#=========  produce a 1st tidy data set
 
 activity <- c("Walking","Walking_upstairs",
               "Walking_downstairs","Sitting","Standing","Laying")
@@ -77,9 +80,12 @@ col_label <- c("index","data-set","subject","activity","Mean","Sdev")
 dimnames(traindat)<-list((1:nrow(trainxdat)),col_label)
 
 #=========#merge test and training sets
-train_testdat <- merge(traindat,testdat,all=TRUE)
+train_test <- merge(traindat,testdat,all=TRUE)
 #head(train_testdat)
 
+write.table(train_test, file = "train_testdat.txt",row.name=FALSE)  
+
+#=========  produce a 2nd tidy data set
 #=========simplified subject data set
 subjectindex <- c(1:30)
 subject_mean <- c(1:30)
@@ -110,3 +116,4 @@ dimnames(activitydat)<-list((1:nrow(activitydat)),col_label)
 sub_act_dat <- merge(subjectdat,activitydat,all=TRUE)
 #head(sub_act_dat)
 write.table(sub_act_dat, file = "acti_subject.txt",row.name=FALSE)  
+
