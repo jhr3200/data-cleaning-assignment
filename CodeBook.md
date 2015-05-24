@@ -10,13 +10,13 @@ The code reads in the data an calculates a tidy data set (in the data.frame) cal
 which it saves in the data file train_testdatt.txt”
 
 The variables are 
-Index; original data set index
-data-set: whether the original data was the training data set of the test data set
-subject: the number of the test subject
-activity: The test activity; "Walking","Walking_upstairs",
-              "Walking_downstairs","Sitting","Standing","Laying"
-Mean: The mean of the original 516 value data vector
-Sdev: : The standard deviation of the original 516 value data vector
+" Index""; original data set index
+" Data-set": whether the original data was the training data set of the test data set
+" Subject": the number of the test subject
+" Activity": The test activity; ("Walking","Walking_upstairs",
+              "Walking_downstairs","Sitting","Standing","Laying")
+" Mean": The mean of the original 516 value data vector
+" Sdev": The standard deviation of the original 516 value data vector
 
 The code creates a 2nd tidy data set  which it saves in the data file 
 “acti_subject.txt”
