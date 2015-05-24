@@ -1,3 +1,5 @@
+This repository contains the Data-cleaning-assignment course project
+
 The analysis is run by run_analysis.R
 This code assumes the current directory contains
 the input data files subject_test.txt,x_test.txt,y_test.txt
